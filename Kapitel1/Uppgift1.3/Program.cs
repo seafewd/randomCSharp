@@ -17,7 +17,7 @@ namespace Uppgift1._3
 
 		private void printTemperatureTable()
 		{
-			//printHeader();
+			printHeader();
 			
 			for (int i = 2; i < 28; i = i + 2)
             {
@@ -44,14 +44,7 @@ namespace Uppgift1._3
 
 		private void printHeader()
         {
-			for (int i = 0; i < 24; i++)
-			{
-				Console.Write(" ");
-				if (i == 1)
-					Console.WriteLine("╏");
-				if (i == 12)
-					Console.WriteLine("Temperature <°C>");
-			}
+			Console.WriteLine("Temperature <°C>");
         }
 
 		/// <summary>
