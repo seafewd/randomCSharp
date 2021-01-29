@@ -8,21 +8,25 @@ namespace Uppgift1._3
 		{
 			Program main = new Program();
 
-			Console.WriteLine("================================================");
-			Console.WriteLine("= The influence of the wind on the temperature =");
-			Console.WriteLine("= Presented in a nice lil' table               =");
-			Console.WriteLine("================================================");
-			main.printTemperatureTable();
+			main.printTemperatureTable(2);
 		}
 
-		private void printTemperatureTable()
+		/// <summary>
+		/// Print a table of actual temperatures vs. effective temperatures
+		/// </summary>
+		private void printTemperatureTable(int increments)
 		{
-			printHeader();
-			
+			string windSpeedLabel = "  Wind (m/s)                     ";
+
+			printHeader(10, -30, increments);
+
+
 			for (int i = 2; i < 28; i = i + 2)
-            {
+			{
 				Console.WriteLine();
 				int[] temps = getEffectiveTemperatures(i);
+				Console.Write("{0, 4}{1, 4}", windSpeedLabel[i / (int)increments] + " |", i + ":");
+
 
 				// for each element in the corresponding effective temperature array,
 				// print the values and color the cells if they match the condition
@@ -34,18 +38,38 @@ namespace Uppgift1._3
 					}
 					else
 						Console.ResetColor();
-					// print temp with spacing of 5
+                    // print temp with spacing of 5
 					Console.Write("{0, 5}", temp);
 				}
+				Console.ResetColor();
 			}
+
 			Console.WriteLine();
-			Console.ResetColor();
+			
+
 		}
 
-		private void printHeader()
+		private void printHeader(int lowerBound, int upperBound, int increments)
         {
-			Console.WriteLine("Temperature <°C>");
-        }
+			string temperatureLabel = "Temperature <°C>";
+			int tableWidth = ((lowerBound - upperBound) / increments + 1) * 5 + 8; // width of table as number of characters
+
+			Console.WriteLine("===========================================");
+			Console.WriteLine("= The wind's influence on the temperature =");
+			Console.WriteLine("= Presented in a nice lil' table          =");
+			Console.WriteLine("===========================================");
+			Console.WriteLine();
+			Console.WriteLine("{0, 4}{1, 0}", "|", temperatureLabel.PadLeft(tableWidth / 2 + 3)); // center shift the label
+			Console.Write("{0, 4}{1, 4}", "|", "");
+
+			for (int i = lowerBound; i >= upperBound; i -= increments)
+            {
+                Console.Write("{0, 5}", i);
+				if (i == upperBound)          // new line after last real temperature number
+					Console.WriteLine();
+            }
+			Console.Write("".PadLeft(tableWidth, '-')); // header separator
+		}
 
 		/// <summary>
 		/// Get an array of numbers corresponding to the effective temperatures depending on wind speed
