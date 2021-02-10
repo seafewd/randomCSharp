@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise1", "Kapitel1\Exercise1.csproj", "{265E43D8-5029-4BB3-856F-8F745A340941}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise1", "Kapitel1\Exercise1.csproj", "{265E43D8-5029-4BB3-856F-8F745A340941}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise2", "Uppgift2\Exercise2.csproj", "{5D589B81-C0D3-4292-ABA5-8C3EC5BD20CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise2", "Uppgift2\Exercise2.csproj", "{5D589B81-C0D3-4292-ABA5-8C3EC5BD20CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise3", "Uppgift3\Exercise3.csproj", "{5DC0C4EC-22DE-47F1-A1AC-F3C04186FC77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise3", "Uppgift3\Exercise3.csproj", "{5DC0C4EC-22DE-47F1-A1AC-F3C04186FC77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1.1", "Uppgift1.1\Uppgift1.1.csproj", "{CD2DB019-ECCC-405F-B9E3-BE6880D203FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift1.1", "Uppgift1.1\Uppgift1.1.csproj", "{CD2DB019-ECCC-405F-B9E3-BE6880D203FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1.2", "Uppgift1.2\Uppgift1.2.csproj", "{4DBFA7F5-0C36-49AC-B737-0067D7E232D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift1.2", "Uppgift1.2\Uppgift1.2.csproj", "{4DBFA7F5-0C36-49AC-B737-0067D7E232D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1.3", "Uppgift1.3\Uppgift1.3.csproj", "{B7733EFF-6689-494D-B336-16192CA8D764}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift1.3", "Uppgift1.3\Uppgift1.3.csproj", "{B7733EFF-6689-494D-B336-16192CA8D764}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift1.4", "Uppgift1.4\Uppgift1.4.csproj", "{25E5AE51-3AEC-4E95-A03B-3F01C1CAE988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1.5", "Uppgift1.5\Uppgift1.5.csproj", "{2F9B552B-89E0-480A-8E46-73D310C761C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{B7733EFF-6689-494D-B336-16192CA8D764}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7733EFF-6689-494D-B336-16192CA8D764}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7733EFF-6689-494D-B336-16192CA8D764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E5AE51-3AEC-4E95-A03B-3F01C1CAE988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E5AE51-3AEC-4E95-A03B-3F01C1CAE988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E5AE51-3AEC-4E95-A03B-3F01C1CAE988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E5AE51-3AEC-4E95-A03B-3F01C1CAE988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9B552B-89E0-480A-8E46-73D310C761C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9B552B-89E0-480A-8E46-73D310C761C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9B552B-89E0-480A-8E46-73D310C761C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9B552B-89E0-480A-8E46-73D310C761C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
