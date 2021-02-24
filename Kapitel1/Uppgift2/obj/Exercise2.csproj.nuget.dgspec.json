@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\Kapitel1\\Uppgift2\\Exercise2.csproj": {}
+    "C:\\Users\\robin\\source\\repos\\randomCSharp\\Kapitel1\\Uppgift2\\Exercise2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\Kapitel1\\Uppgift2\\Exercise2.csproj": {
+    "C:\\Users\\robin\\source\\repos\\randomCSharp\\Kapitel1\\Uppgift2\\Exercise2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\Kapitel1\\Uppgift2\\Exercise2.csproj",
+        "projectUniqueName": "C:\\Users\\robin\\source\\repos\\randomCSharp\\Kapitel1\\Uppgift2\\Exercise2.csproj",
         "projectName": "Exercise2",
-        "projectPath": "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\Kapitel1\\Uppgift2\\Exercise2.csproj",
-        "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\Kapitel1\\Uppgift2\\obj\\",
+        "projectPath": "C:\\Users\\robin\\source\\repos\\randomCSharp\\Kapitel1\\Uppgift2\\Exercise2.csproj",
+        "packagesPath": "C:\\Users\\robin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robin\\source\\repos\\randomCSharp\\Kapitel1\\Uppgift2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
