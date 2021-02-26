@@ -10,3 +10,16 @@ C:\Users\robin\source\repos\randomCSharp\Kapitel1\Uppgift2.1\bin\Debug\netcoreap
 C:\Users\robin\source\repos\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.dll
 C:\Users\robin\source\repos\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.pdb
 C:\Users\robin\source\repos\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.genruntimeconfig.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\bin\Debug\netcoreapp3.1\Uppgift2.1.exe
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\bin\Debug\netcoreapp3.1\Uppgift2.1.deps.json
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\bin\Debug\netcoreapp3.1\Uppgift2.1.runtimeconfig.json
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\bin\Debug\netcoreapp3.1\Uppgift2.1.runtimeconfig.dev.json
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\bin\Debug\netcoreapp3.1\Uppgift2.1.dll
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\bin\Debug\netcoreapp3.1\Uppgift2.1.pdb
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.csprojAssemblyReference.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.AssemblyInfoInputs.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.AssemblyInfo.cs
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.csproj.CoreCompileInputs.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.dll
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.pdb
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.1\obj\Debug\netcoreapp3.1\Uppgift2.1.genruntimeconfig.cache

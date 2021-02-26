@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\robin\\.nuget\\packages\\": {}
+    "C:\\Users\\Alexander\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\robin\\Source\\Repos\\randomCSharp\\Kapitel1\\Uppgift1.3\\Uppgift1.3.csproj",
+      "projectUniqueName": "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\randomCSharp\\Kapitel1\\Uppgift1.3\\Uppgift1.3.csproj",
       "projectName": "Uppgift1.3",
-      "projectPath": "C:\\Users\\robin\\Source\\Repos\\randomCSharp\\Kapitel1\\Uppgift1.3\\Uppgift1.3.csproj",
-      "packagesPath": "C:\\Users\\robin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\robin\\Source\\Repos\\randomCSharp\\Kapitel1\\Uppgift1.3\\obj\\",
+      "projectPath": "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\randomCSharp\\Kapitel1\\Uppgift1.3\\Uppgift1.3.csproj",
+      "packagesPath": "C:\\Users\\Alexander\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alexander\\Sync\\Documents\\DV@GU\\c#_1\\labs\\labs\\randomCSharp\\Kapitel1\\Uppgift1.3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\robin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

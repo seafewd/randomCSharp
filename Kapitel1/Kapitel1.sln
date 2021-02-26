@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift1.4", "Uppgift1.4\Up
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift1.5", "Uppgift1.5\Uppgift1.5.csproj", "{2F9B552B-89E0-480A-8E46-73D310C761C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift2.1", "Uppgift2.1\Uppgift2.1.csproj", "{405F4F05-38E0-4973-BBAD-B16142D16C4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift2.1", "Uppgift2.1\Uppgift2.1.csproj", "{405F4F05-38E0-4973-BBAD-B16142D16C4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift1.8", "Uppgift1.8\Uppgift1.8.csproj", "{30EE3A66-1DC3-4889-A99C-6DF6BA2B3E8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uppgift1.8", "Uppgift1.8\Uppgift1.8.csproj", "{30EE3A66-1DC3-4889-A99C-6DF6BA2B3E8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uppgift2.2", "Uppgift2.2\Uppgift2.2.csproj", "{F21BF644-4CA6-4690-BDBB-2AB2AA32D138}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{30EE3A66-1DC3-4889-A99C-6DF6BA2B3E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30EE3A66-1DC3-4889-A99C-6DF6BA2B3E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30EE3A66-1DC3-4889-A99C-6DF6BA2B3E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21BF644-4CA6-4690-BDBB-2AB2AA32D138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21BF644-4CA6-4690-BDBB-2AB2AA32D138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21BF644-4CA6-4690-BDBB-2AB2AA32D138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21BF644-4CA6-4690-BDBB-2AB2AA32D138}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

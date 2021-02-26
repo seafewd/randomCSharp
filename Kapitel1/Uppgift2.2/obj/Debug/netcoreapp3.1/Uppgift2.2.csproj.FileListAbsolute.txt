@@ -1,0 +1,12 @@
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\bin\Debug\netcoreapp3.1\Uppgift2.2.exe
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\bin\Debug\netcoreapp3.1\Uppgift2.2.deps.json
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\bin\Debug\netcoreapp3.1\Uppgift2.2.runtimeconfig.json
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\bin\Debug\netcoreapp3.1\Uppgift2.2.runtimeconfig.dev.json
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\bin\Debug\netcoreapp3.1\Uppgift2.2.dll
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\bin\Debug\netcoreapp3.1\Uppgift2.2.pdb
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\obj\Debug\netcoreapp3.1\Uppgift2.2.AssemblyInfoInputs.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\obj\Debug\netcoreapp3.1\Uppgift2.2.AssemblyInfo.cs
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\obj\Debug\netcoreapp3.1\Uppgift2.2.csproj.CoreCompileInputs.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\obj\Debug\netcoreapp3.1\Uppgift2.2.dll
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\obj\Debug\netcoreapp3.1\Uppgift2.2.pdb
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel1\Uppgift2.2\obj\Debug\netcoreapp3.1\Uppgift2.2.genruntimeconfig.cache
