@@ -14,7 +14,7 @@ namespace Kapitel3
     {
         private int ballSpeedX = 4;
         private int ballSpeedY = 4;
-        private int speedTop = 4;
+        private int ballSpeed = 4;
         private int points = 0;
         
 
@@ -59,27 +59,27 @@ namespace Kapitel3
             ball.Left += ballSpeedX;
             ball.Top += ballSpeedY;
 
-            if (ball.Bottom >= paddle1.Top && ball.Bottom <= paddle1.Bottom && ball.Left >= paddle1.Left && ball.Right <= paddle1.Right)
+            if (ball.Bottom >= paddle1.Top &&
+                ball.Bottom <= paddle1.Bottom && 
+                ball.Left >= paddle1.Left && 
+                ball.Right <= paddle1.Right)
             {
                 ballSpeedY += 2;
                 ballSpeedX += 2;
-                speedTop = -speedTop; // change dir
+                ballSpeed = -ballSpeed; // change dir
                 points++;
             }
 
-            if(ball.Left <= panel.Left)
+            // wall collision
+            if(ball.Top >= panel.Top)
             {
-                ballSpeedX = -ballSpeedX;
+                ballSpeedY = -ballSpeedY;
             }
-            if(ball.Right >= panel.Right)
+            if (ball.Bottom >= panel.Bottom)
             {
-                ballSpeedX = -ballSpeedX;
+                ballSpeedY = -ballSpeedY;
             }
-            if(ball.Top <= panel.Top)
-            {
-                speedTop = -speedTop;
-            }
-            if(ball.Bottom >= panel.Bottom)
+            if (ball.Right >= panel.Right || ball.Left <= panel.Left)
             {
                 timer1.Enabled = false;
             }
