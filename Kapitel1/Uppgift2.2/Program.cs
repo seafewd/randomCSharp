@@ -17,20 +17,34 @@ namespace Uppgift2._2
     public class StaticVariable
     {
         private static int counter = 0;
-        private readonly string id;
+        private readonly Guid id;
 
         public StaticVariable()
         {
+            // inc static counter
             counter++;
-            id = GenerateId(10);
+
+            // generate id
+            //id = GenerateId(10);
+            // or be boring:
+            id = Guid.NewGuid();
             Console.WriteLine("Created a StaticVariable object.\nNumber of objects: " + counter + "\nID: " + GetId() + "\n----------");
         }
 
+        /// <summary>
+        /// Get counter var
+        /// </summary>
+        /// <returns></returns>
         public static int GetCounter()
         {
             return counter;
         }
 
+        /// <summary>
+        /// Generate ID of numbers with length n
+        /// </summary>
+        /// <param name="length">length of ID</param>
+        /// <returns></returns>
         private string GenerateId(int length)
         {
             Random rand = new Random();
@@ -40,7 +54,11 @@ namespace Uppgift2._2
             return sb.ToString();
         }
 
-        public string GetId()
+        /// <summary>
+        /// Get ID
+        /// </summary>
+        /// <returns></returns>
+        public Guid GetId()
         {
             return id;
         }
