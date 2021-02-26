@@ -11,6 +11,8 @@ namespace Uppgift2._2
             StaticVariable sv2 = new StaticVariable();
             StaticVariable sv3 = new StaticVariable();
             StaticVariable sv4 = new StaticVariable();
+            StaticVariable sv5 = new StaticVariable();
+            StaticVariable sv6 = new StaticVariable();
         }
     }
 
@@ -25,7 +27,7 @@ namespace Uppgift2._2
             counter++;
 
             // generate id
-            //id = GenerateId(10);
+            //id = GenerateId(50);
             // or be boring:
             id = Guid.NewGuid();
             Console.WriteLine("Created a StaticVariable object.\nNumber of objects: " + counter + "\nID: " + GetId() + "\n----------");
