@@ -48,6 +48,7 @@ namespace Kapitel3
             this.paddle2.Size = new System.Drawing.Size(24, 195);
             this.paddle2.TabIndex = 0;
             this.paddle2.TabStop = false;
+            this.paddle2.Click += new System.EventHandler(this.paddle2_Click);
             // 
             // ball
             // 
@@ -77,7 +78,7 @@ namespace Kapitel3
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1324, 589);
+            this.panel.Size = new System.Drawing.Size(1327, 589);
             this.panel.TabIndex = 3;
             // 
             // GUI

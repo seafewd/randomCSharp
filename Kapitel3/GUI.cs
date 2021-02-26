@@ -12,9 +12,10 @@ namespace Kapitel3
 {
     public partial class GUI : Form
     {
-        private int ballSpeedX = 4;
-        private int ballSpeedY = 4;
-        private int ballSpeed = 4;
+        private readonly int PADDLE_SCREEN_OFFSET = 30;
+        private int ballSpeedX = 10;
+        private int ballSpeedY = 10;
+        //private int ballSpeed = 4;
         private int points = 0;
         
 
@@ -27,12 +28,18 @@ namespace Kapitel3
             //this.TopMost = true;                              // bring form to front
             this.Bounds = Screen.PrimaryScreen.Bounds;          // make fullscreen
 
-            paddle1.Top = panel.Bottom - (panel.Height / 2);    // set position of paddle1
-            paddle1.Left = 30;                                  // set position of paddle1
-            paddle2.Top = panel.Bottom - (panel.Height / 2);    // set position of paddle2
-            paddle2.Left = panel.Right - 50;                    // set position of paddle2
-            ball.Top = panel.Bottom - (panel.Height / 2);       // set position of ball
-            ball.Left = (panel.Right / 2);                       // set position of ball
+
+            // init position of paddles and ball
+            // paddle1.Top means distance from the top of the box to the top of container (the window). Basically the y-value of the box.
+            paddle1.Top = panel.Height / 2 + paddle1.Height / 2;
+            paddle1.Left = PADDLE_SCREEN_OFFSET;
+
+            paddle2.Top = panel.Height / 2 - paddle1.Height / 2;
+            paddle2.Left = panel.Right - PADDLE_SCREEN_OFFSET - paddle2.Width;  
+            
+            // set position of paddle2
+            ball.Top = panel.Height / 2 + ball.Height / 2; 
+            ball.Left = panel.Width / 2 + ball.Width / 2;
 
         }
 
@@ -59,30 +66,48 @@ namespace Kapitel3
             ball.Left += ballSpeedX;
             ball.Top += ballSpeedY;
 
-            if (ball.Bottom >= paddle1.Top &&
-                ball.Bottom <= paddle1.Bottom && 
-                ball.Left >= paddle1.Left && 
-                ball.Right <= paddle1.Right)
-            {
-                ballSpeedY += 2;
-                ballSpeedX += 2;
-                ballSpeed = -ballSpeed; // change dir
-                points++;
-            }
+            // TODO: fix utkukning while corner collision
+            if (Intersects(ball, paddle1) || Intersects(ball, paddle2))
+                ballSpeedX *= -1;
 
             // wall collision
-            if(ball.Top >= panel.Top)
-            {
-                ballSpeedY = -ballSpeedY;
-            }
-            if (ball.Bottom >= panel.Bottom)
-            {
-                ballSpeedY = -ballSpeedY;
-            }
-            if (ball.Right >= panel.Right || ball.Left <= panel.Left)
-            {
-                timer1.Enabled = false;
-            }
+            if (IntersectsWallHorizontally(ball, panel))
+                ballSpeedY *= -1;
+            if (IntersectsWallVertically(ball, panel))
+                ballSpeedX *= -1;
+        }
+
+
+        // Returns true if there is an intersection between the given ball and paddle 
+        // Using simple boolean algebra
+        bool Intersects(PictureBox aBall, PictureBox aPaddle)
+        {
+            bool ballIsAbove = aBall.Bottom < aPaddle.Top;
+            bool ballIsBelow = aBall.Top > aPaddle.Bottom;
+            bool ballIsRightOf = aBall.Left > aPaddle.Right;
+            bool ballIsLeftOf = aBall.Right < aPaddle.Left;
+
+            // The logic:
+            // If the ball is above or below or left of, etc,  its not intersecting the paddle.
+            // If we take the negation of the above we know when IT DOES intersect
+            return !(ballIsAbove || ballIsBelow || ballIsLeftOf || ballIsRightOf);
+        }
+
+
+        // Returns true if, say the distance from the top of the box is less than the top of the panel (windows in our case) 
+        // Same idea with the rest
+        bool IntersectsWallHorizontally(PictureBox box, Panel pan)
+        {
+            return box.Top <= pan.Top || box.Bottom >= pan.Bottom;
+        }
+        bool IntersectsWallVertically(PictureBox box, Panel pan)
+        {
+            return box.Right >= pan.Right || box.Left <= pan.Left;
+        }
+
+        private void paddle2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
