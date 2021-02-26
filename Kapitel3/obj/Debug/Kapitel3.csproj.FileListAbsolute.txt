@@ -1,0 +1,10 @@
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\bin\Debug\Kapitel3.exe.config
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\bin\Debug\Kapitel3.exe
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\bin\Debug\Kapitel3.pdb
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\obj\Debug\Kapitel3.csprojAssemblyReference.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\obj\Debug\Kapitel3.Properties.Resources.resources
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\obj\Debug\Kapitel3.csproj.GenerateResource.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\obj\Debug\Kapitel3.csproj.CoreCompileInputs.cache
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\obj\Debug\Kapitel3.exe
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\obj\Debug\Kapitel3.pdb
+C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Kapitel3\obj\Debug\Kapitel3.GUI.resources
