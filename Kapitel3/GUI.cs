@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,11 +14,12 @@ namespace Kapitel3
     public partial class GUI : Form
     {
         private readonly int PADDLE_SCREEN_OFFSET = 30;
-        private double ballSpeedX = 10;
+        private double ballSpeedX = -10;
         private double ballSpeedY = 10;
         private int score = 0;
         private double speedMultiplier = 1.1f;
         private double maxSpeed = 40f;
+        private int AIPaddlePos;
 
 
         public GUI()
@@ -74,10 +76,15 @@ namespace Kapitel3
             ball.Left += (int)ballSpeedX;
             ball.Top += (int)ballSpeedY;
 
+            // move AI paddle
+            UpdateAIPaddlePos(paddle2, ball);
+            paddle2.Top = AIPaddlePos;
+
             // TODO: fix utkukning while corner collision
             if (Intersects(ball, paddle1) || Intersects(ball, paddle2)) {
+                Console.WriteLine("intersected paddle");
                 if (Math.Abs(ballSpeedX) < maxSpeed)
-                    ballSpeedX *= speedMultiplier;
+                    ballSpeedX *= -speedMultiplier;
                 else
                     ballSpeedX *= -1;
             }
@@ -88,6 +95,22 @@ namespace Kapitel3
                 ShowGameOverScreen();
 
             UpdateScore();
+        }
+
+        /// <summary>
+        /// Asynchronously update AI paddle position to artificially introduce difficulty/AI smartness... 
+        /// </summary>
+        /// <param name="paddle"></param>
+        /// <param name="ball"></param>
+        async void UpdateAIPaddlePos(PictureBox paddle, PictureBox ball)
+        {
+            int paddleMidPos = (paddle.Height / 2);
+            Random rand = new Random();
+            await Task.Run(() =>
+            {
+                Task.Delay(rand.Next(0, 100)).Wait();
+                AIPaddlePos = ball.Top - paddleMidPos;
+            });
         }
 
         /// <summary>
