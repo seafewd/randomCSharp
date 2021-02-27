@@ -82,7 +82,8 @@ namespace Kapitel3
 
             // TODO: fix utkukning while corner collision
             if (Intersects(ball, paddle1) || Intersects(ball, paddle2)) {
-                Console.WriteLine("intersected paddle");
+                //setBounceDirection(ball, paddle1);
+                //setBounceDirection(ball, paddle2);
                 if (Math.Abs(ballSpeedX) < maxSpeed)
                     ballSpeedX *= -speedMultiplier;
                 else
@@ -111,6 +112,34 @@ namespace Kapitel3
                 Task.Delay(rand.Next(0, 100)).Wait();
                 AIPaddlePos = ball.Top - paddleMidPos;
             });
+        }
+
+        /// <summary>
+        /// Set bounce direction depending on where the ball hits the paddle
+        /// TODO this is scuffed atm
+        /// </summary>
+        /// <param name="ball"></param>
+        /// <param name="paddle"></param>
+        private void setBounceDirection(PictureBox ball, PictureBox paddle)
+        {
+            double paddlePos = paddle.Top;
+            double ballPos = ball.Top + (ball.Height / 2);
+
+            double first = paddlePos + paddle.Height * .25;
+            double second = paddlePos + paddle.Height * .50;
+            double third = paddlePos + paddle.Height * .75;
+            double fourth = paddlePos + paddle.Height;
+
+            if (ballPos < first)
+                ballSpeedY *= (1.25);
+            if (ballPos >= first && ballPos < second)
+                ballSpeedY *= (.5);
+            if (ballPos >= second && ballPos < third)
+                ballSpeedY *= 1;
+            if (ballPos >= third && ballPos < fourth)
+                ballSpeedY *= (.5);
+            if (ballPos > fourth)
+                ballSpeedY *= (1.25);
         }
 
         /// <summary>
