@@ -35,9 +35,12 @@ namespace Kapitel3
             this.paddle1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel = new System.Windows.Forms.Panel();
+            this.ScoreLabel = new System.Windows.Forms.Label();
+            this.GameOverLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.paddle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paddle1)).BeginInit();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // paddle2
@@ -75,11 +78,37 @@ namespace Kapitel3
             // 
             // panel
             // 
+            this.panel.Controls.Add(this.GameOverLabel);
+            this.panel.Controls.Add(this.ScoreLabel);
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1327, 589);
+            this.panel.Size = new System.Drawing.Size(1324, 589);
             this.panel.TabIndex = 3;
+            // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreLabel.Location = new System.Drawing.Point(563, 27);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(182, 59);
+            this.ScoreLabel.TabIndex = 0;
+            this.ScoreLabel.Text = "Score: 0";
+            this.ScoreLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // GameOverLabel
+            // 
+            this.GameOverLabel.AutoSize = true;
+            this.GameOverLabel.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.GameOverLabel.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GameOverLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GameOverLabel.Location = new System.Drawing.Point(462, 107);
+            this.GameOverLabel.Name = "GameOverLabel";
+            this.GameOverLabel.Size = new System.Drawing.Size(382, 312);
+            this.GameOverLabel.TabIndex = 1;
+            this.GameOverLabel.Text = "Game Over!\r\n\r\nEsc  -  Quit\r\nF1    -  Restart";
+            this.GameOverLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GUI
             // 
@@ -96,6 +125,8 @@ namespace Kapitel3
             ((System.ComponentModel.ISupportInitialize)(this.paddle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paddle1)).EndInit();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -107,6 +138,8 @@ namespace Kapitel3
         private System.Windows.Forms.PictureBox paddle1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Label ScoreLabel;
+        private System.Windows.Forms.Label GameOverLabel;
     }
 }
 

@@ -13,11 +13,12 @@ namespace Kapitel3
     public partial class GUI : Form
     {
         private readonly int PADDLE_SCREEN_OFFSET = 30;
-        private int ballSpeedX = 10;
-        private int ballSpeedY = 10;
-        //private int ballSpeed = 4;
-        private int points = 0;
-        
+        private double ballSpeedX = 10;
+        private double ballSpeedY = 10;
+        private int score = 0;
+        private double speedMultiplier = 1.1f;
+        private double maxSpeed = 40f;
+
 
         public GUI()
         {
@@ -41,40 +42,86 @@ namespace Kapitel3
             ball.Top = panel.Height / 2 + ball.Height / 2; 
             ball.Left = panel.Width / 2 + ball.Width / 2;
 
+            // hide game over screen
+            GameOverLabel.Visible = false;
+
+            // position score label
+            ScoreLabel.Left = (panel.Width / 2) - (ScoreLabel.Width / 2);
+            ScoreLabel.Top = 50;
+
         }
 
-        private void GUI_KeyDown(object sender, KeyEventArgs e)
+        // handle key presses
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (e.KeyCode == Keys.Escape)
+            if (keyData == Keys.Escape)
             {
                 this.Close();
                 Console.WriteLine("closing");
+                return true;
             }
-            if (e.KeyCode == Keys.F1)
+            if (keyData == Keys.F1)
             {
-                //reset
+                ResetGame();
+                return true;
             }
-            if (e.KeyCode == Keys.Down)
-            {
-                // down
-            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             paddle1.Top = Cursor.Position.Y - (paddle1.Height / 2);     // set center of paddle to position of cursor
-            ball.Left += ballSpeedX;
-            ball.Top += ballSpeedY;
+            ball.Left += (int)ballSpeedX;
+            ball.Top += (int)ballSpeedY;
 
             // TODO: fix utkukning while corner collision
-            if (Intersects(ball, paddle1) || Intersects(ball, paddle2))
-                ballSpeedX *= -1;
-
+            if (Intersects(ball, paddle1) || Intersects(ball, paddle2)) {
+                if (Math.Abs(ballSpeedX) < maxSpeed)
+                    ballSpeedX *= speedMultiplier;
+                else
+                    ballSpeedX *= -1;
+            }
             // wall collision
             if (IntersectsWallHorizontally(ball, panel))
                 ballSpeedY *= -1;
             if (IntersectsWallVertically(ball, panel))
-                ballSpeedX *= -1;
+                ShowGameOverScreen();
+
+            UpdateScore();
+        }
+
+        /// <summary>
+        /// Show game over screen
+        /// </summary>
+        void ShowGameOverScreen()
+        {
+            GameOverLabel.Left = (panel.Width / 2) - (GameOverLabel.Width / 2);
+            GameOverLabel.Top = (panel.Height / 2) - (GameOverLabel.Height / 2);
+            GameOverLabel.Visible = true;
+        }
+
+        void ResetGame()
+        {
+            ball.Top = (panel.Height / 2);
+            ball.Left = (panel.Width / 2);
+            ballSpeedY = 10;
+            ballSpeedX = 10;
+            ScoreLabel.Text = "Score: 0";
+            timer1.Enabled = true;
+            GameOverLabel.Visible = false;
+
+        }
+
+        /// <summary>
+        /// Update score whenever the ball hits one of the paddles
+        /// </summary>
+        void UpdateScore()
+        {
+            if (Intersects(ball, paddle1) || Intersects(ball, paddle2))
+            {
+                score++;
+                ScoreLabel.Text = "Points: " + score;
+            }
         }
 
 
@@ -106,6 +153,11 @@ namespace Kapitel3
         }
 
         private void paddle2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
