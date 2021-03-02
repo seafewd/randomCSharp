@@ -20,6 +20,9 @@ namespace Kapitel3
         private double speedMultiplier = 1.1f;
         private double maxSpeed = 40f;
         private int AIPaddlePos;
+        private bool isColliding = false;
+
+        enum BounceDirection{UP, DOWN, LEFT, RIGHT};
 
 
         public GUI()
@@ -80,21 +83,23 @@ namespace Kapitel3
             UpdateAIPaddlePos(paddle2, ball);
             paddle2.Top = AIPaddlePos;
 
-            // TODO: fix utkukning while corner collision
-            if (Intersects(ball, paddle1) || Intersects(ball, paddle2)) {
-                //setBounceDirection(ball, paddle1);
-                //setBounceDirection(ball, paddle2);
-                if (Math.Abs(ballSpeedX) < maxSpeed)
-                    ballSpeedX *= -speedMultiplier;
-                else
-                    ballSpeedX *= -1;
-            }
+
+            // paddle collision
+            double newSpeedX = ballSpeedX * speedMultiplier;
+
+            if (Intersects(ball, paddle1) && ballHasPastPaddle(ball, paddle1))
+                ballSpeedX = Math.Abs(Math.Min(newSpeedX, maxSpeed)); // set ballspeed to positive and set the new speed within the speed limit
+
+            else if (Intersects(ball, paddle2) && ballHasPastPaddle(ball, paddle2))
+                ballSpeedX = - Math.Abs(Math.Min(newSpeedX, maxSpeed)); // set ballspeed to negative and set the new speed within the speed limit
+
+
             // wall collision
             if (IntersectsWallHorizontally(ball, panel))
                 ballSpeedY *= -1;
             if (IntersectsWallVertically(ball, panel))
-                ShowGameOverScreen();
-
+                //ShowGameOverScreen();
+                ballSpeedX *= -1;
             UpdateScore();
         }
 
@@ -177,6 +182,7 @@ namespace Kapitel3
         }
 
 
+
         // Returns true if there is an intersection between the given ball and paddle 
         // Using simple boolean algebra
         bool Intersects(PictureBox aBall, PictureBox aPaddle)
@@ -192,6 +198,12 @@ namespace Kapitel3
             return !(ballIsAbove || ballIsBelow || ballIsLeftOf || ballIsRightOf);
         }
 
+        // Returns true if the ball has "past" the paddle. Ideally the ball would bounce up or down from a top or bottom hit, but since the ball would
+        // bounce out of the playfield anyways, we decided to keep it simple
+        bool ballHasPastPaddle(PictureBox aBall, PictureBox aPaddle)
+        {
+            return aBall.Left < aPaddle.Left || aBall.Right > aPaddle.Right;
+        }
 
         // Returns true if, say the distance from the top of the box is less than the top of the panel (windows in our case) 
         // Same idea with the rest
@@ -202,6 +214,11 @@ namespace Kapitel3
         bool IntersectsWallVertically(PictureBox box, Panel pan)
         {
             return box.Right >= pan.Right || box.Left <= pan.Left;
+        }
+
+        bool IsWithinSpeedLimit(double ballSpeed, double maxSpeed)
+        {
+            return Math.Abs(ballSpeed) < maxSpeed;
         }
 
         private void paddle2_Click(object sender, EventArgs e)
