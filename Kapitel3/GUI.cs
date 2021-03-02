@@ -98,8 +98,8 @@ namespace Kapitel3
             if (IntersectsWallHorizontally(ball, panel))
                 ballSpeedY *= -1;
             if (IntersectsWallVertically(ball, panel))
-                //ShowGameOverScreen();
-                ballSpeedX *= -1;
+                ShowGameOverScreen();
+                //ballSpeedX *= -1;
             UpdateScore();
         }
 
