@@ -9,19 +9,23 @@ namespace Uppgift1._2
 		{
 			Program main = new Program();
 
-			double cost = main.inputCost();                             // get cost of the purchase
-			double received = main.inputAmountReceived();               // get amount received from customer
-			double change = received - cost;							// calculate change
-			if (change < 0)												// if customer doesn't have enough money the transaction doesn't make sense. abort
+			// get cost of the purchase
+			double cost = main.inputCost();
+			// get amount received from customer
+			double received = main.inputAmountReceived();
+			// calculate change
+			double change = received - cost;
+
+			// if customer doesn't have enough money the transaction doesn't make sense. abort
+			if (change < 0)
 			{
 				Console.WriteLine("Customer doesn't have enough money for this purchase.");
 				return;
 			}
 
 			Console.WriteLine("\nChange: {0} kr", change);
-			main.printChange(change);									// print the change in bills of 1000, 500, 100 etc.
-
-
+			// print the change in bills of 1000, 500, 100 etc.
+			main.printChange(change);
 		}
 
 		/// <summary>
@@ -54,12 +58,14 @@ namespace Uppgift1._2
 		private double verifyInput()
 		{
 			double result = 0d;
-			while (true)														// loop until input is acceptable
+			// loop until input is acceptable
+			while (true)
 			{
 				try
 				{
 					string input = Console.ReadLine();
-					result = double.Parse(input, CultureInfo.InvariantCulture);	 // try to parse user input and see if it's a valid float number
+					// try to parse user input and see if it's a valid float number
+					result = double.Parse(input, CultureInfo.InvariantCulture);
 					break;
 				}
 				catch (FormatException)
@@ -76,8 +82,11 @@ namespace Uppgift1._2
 		/// <param name="change">Change</param>
 		private void printChange(double change)
 		{
-			int thousandBills = (int)change / 1000;								// divide change by 1000 to get the amount of 1000-bills
-			change -= 1000 * thousandBills;										// update value of change by subtracting the number of 1000 bills times 1000
+			// divide change by 1000 to get the amount of 1000-bills
+			int thousandBills = (int)change / 1000;
+			// update value of change by subtracting the number of 1000 bills times 1000
+			change -= 1000 * thousandBills;
+			// etc...
 			int fiveHundredbills = (int)change / 500;
 			change -= 500 * fiveHundredbills;
 			int hundredBills = (int)change / 100;
@@ -88,9 +97,9 @@ namespace Uppgift1._2
 			change -= 5 * fiveCrowns;
 			int oneCrowns = (int)change / 1;
 			change -= 1 * oneCrowns;
-			
 
-			if (thousandBills != 0)												// only print the amount of bills and coins if it makes sense
+			// only print the amount of bills and coins if it makes sense
+			if (thousandBills != 0)
 				Console.WriteLine(" 1000-bills: {0}", thousandBills);
 			if (fiveHundredbills != 0)
 				Console.WriteLine("  500-bills: {0}", fiveHundredbills);

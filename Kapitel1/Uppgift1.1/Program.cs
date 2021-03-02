@@ -8,19 +8,25 @@ namespace Uppgift1._1
 		{
 			Program main = new Program();
 
-			while (true)																									// run loop until user types "exit"
+			// run loop until user types "exit"
+			while (true)
 			{
-				int[] randomIntegers = main.generateIntegers(10000);														// store 10000 randomly generated integers in array
-				int firstInt = 2;																							// first integer to check
-				int secondInt = 9;																							// second integer to check
-				int totalIntegers = main.countNumbers(randomIntegers, firstInt, secondInt);									// count the number of occurences of the above integers
+				// store 10000 randomly generated integers in array
+				int[] randomIntegers = main.generateIntegers(10000);
+				// first integer to check
+				int firstInt = 2;
+				// second integer to check
+				int secondInt = 9;
+				// count the number of occurences of the above integers
+				int totalIntegers = main.countNumbers(randomIntegers, firstInt, secondInt);
+				// output
 				Console.WriteLine("Generated {0} random integers.", randomIntegers.Length);
 				Console.WriteLine("Found {0} occurences of integers {1} and {2}.\n", totalIntegers, firstInt, secondInt);
 
 				Console.WriteLine("Type \"exit\" to quit. Press Enter to try again.");
 				string input = Console.ReadLine();
-				if (input.ToLower() == "exit")																				// break loop if user types exit
-					break;
+				if (input.ToLower() == "exit")
+					break; // break loop if user types exit (not case sensitive)
 			}
 			
 		}
