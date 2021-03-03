@@ -4,24 +4,34 @@ using System.Text.RegularExpressions;
 
 namespace Uppgift2._3
 {
+    /// <summary>
+    /// Password changer class
+    /// </summary>
     class PasswordChanger
     {
         private string password;
 
+        /// <summary>
+        /// Constructor with a password string
+        /// </summary>
+        /// <param name="pw"></param>
         public PasswordChanger(string pw)
         {
             this.password = pw;
         }
         static void Main(string[] args)
         {
+            // new PasswordChanger with password string
             PasswordChanger pwc = new PasswordChanger("F60gT%ft2$U");
             string input;
             Console.WriteLine("Welcome to password changer.\n");
+            // start loop
             while (true)
             {
                 Console.WriteLine("Enter your old password: ");
                 input = Console.ReadLine();
                 Console.WriteLine();
+                // check if password is correct
                 if (input != pwc.password)
                     Console.WriteLine("Wrong password. Try again.\n");
                 else
