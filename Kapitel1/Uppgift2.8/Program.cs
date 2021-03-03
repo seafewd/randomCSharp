@@ -27,32 +27,34 @@ namespace Uppgift2._8
         public string EncryptOrDecrypt(string input, bool encryption)
         {
             StringBuilder sb = new StringBuilder();
-            foreach (char c in input)
-                sb.Append(EncryptSubString(c, encryption));
-            return sb.ToString();
-        }
+            // letter, number, special char etc
+            int index = 0;
+            char subString = ' ';
+            char character = input[index];
 
-        public string EncryptSubString(char c, bool encryption)
-        {
-            StringBuilder sb = new StringBuilder();
-            int type;
-
-            if (Char.IsLetter(c))
-                type = 12;
-            else if (Char.IsDigit(c))
-                type = 5;
-            else
-                type = 12;
-
-            for(int i = 0; i < type; i++)
-            {
-                char subString;
-                if(encryption)
-                    subString = (char)(c + 1);
-                else
-                    subString = (char)(c - 1);
-                sb.Append(subString);
+            if (Char.IsLetter(character)) {
+                for (int i = 0; i < 12; i++)
+                {
+                    subString = (char)(character + 1);
+                    if (!encryption)
+                        i += 7;
+                }
             }
+            else if (Char.IsDigit(character))
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    subString = (char)(character + 1);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < 12; i++)
+                {
+                    subString = (char)(character + 1);
+                }
+            }
+            sb.Append(subString);
             return sb.ToString();
         }
     }
