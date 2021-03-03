@@ -6,32 +6,21 @@ using System.Text;
 
 namespace MorseCodeTranslator
 {
+    /// <summary>
+    /// Morse code translator
+    /// TODO: Writes file to disk
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
         {
             Program main = new Program();
 
+            // morse code for ABCD
             string tempCode = ".- -... -.-. -.. .";
 
+            // separates original string into array of strings
             string[] test = main.SplitMorse(tempCode);
-
-            // sloppy-test split
-            /*
-            foreach(string str in test){
-                Console.WriteLine(str); 
-            }
-            */
-
-
-            // sloppy-test fileToDict
-            /*
-            Dictionary<string, string> morseDict = main.ReadTextFile();
-            foreach (string key in morseDict.Keys)
-            {
-                Console.WriteLine(key);
-            }
-            */
 
             // sloppy-test translation
             Dictionary<string, string> morseDict = main.ReadTextFile();
@@ -51,18 +40,18 @@ namespace MorseCodeTranslator
         }
 
 
-        // C:\Users\robin\Documents
-
         // Returns a dictionary of key value pairs of morse code
         // *Reads the morse tranlation dictionary text file (formatted with 2 columns) 
         public Dictionary<string, string> ReadTextFile()
         {
             string line;
+            string path = @"C:\Users\robin\Documents\morse-code.txt";
+            string path2 = @"C:\Users\Alexander\Sync\Documents\DV@GU\c#_1\labs\labs\randomCSharp\Uppgift3.9/morse-code.txt";
 
             Dictionary<string, string> morseTranslationDictionary = new Dictionary<string, string>();
 
             // Read the file and display it line by line.
-            using (StreamReader file = new StreamReader(@"C:\Users\robin\Documents\morse-code.txt"))
+            using (StreamReader file = new StreamReader(path2))
             {
                 while ((line = file.ReadLine()) != null)
                 {
