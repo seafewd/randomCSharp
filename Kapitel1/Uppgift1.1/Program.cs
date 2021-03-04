@@ -43,7 +43,7 @@ namespace Uppgift1._1
 
 			for (int i = 0; i < n; i++)
 			{
-				integers[i] = rand.Next(0, 9);
+				integers[i] = rand.Next(0, 10);
 			}
 
 			return integers;

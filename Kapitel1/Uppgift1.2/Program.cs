@@ -3,6 +3,9 @@ using System.Globalization;
 
 namespace Uppgift1._2
 {
+	/// <summary>
+	/// Calculate change when making a purchase
+	/// </summary>
 	class Program
 	{
 		static void Main(string[] args)
@@ -36,7 +39,7 @@ namespace Uppgift1._2
 		{
 			Console.Write("Enter cost: ");
 			double cost = verifyInput();
-			cost = Math.Ceiling(cost * 2) / 2;							// round up to nearest 50 cents
+			cost = Math.Ceiling(cost * 2) / 2; // round up to nearest 50 cents
 			Console.WriteLine(cost);
 			return cost;
 		}
@@ -77,7 +80,7 @@ namespace Uppgift1._2
 		}
 
 		/// <summary>
-		/// Print the change that the user gets back in bills of 1000, 500, 100, 20 and 5, 1 and 50 cent coins
+		/// Print the change that the user gets back in bills of 1000, 500, 100, 20 and 5, 1
 		/// </summary>
 		/// <param name="change">Change</param>
 		private void printChange(double change)

@@ -16,17 +16,19 @@ namespace Uppgift1._3
 		/// </summary>
 		private void printTemperatureTable(int increments)
 		{
+			// wind speed label
 			string windSpeedLabel = "  Wind (m/s)                     ";
 
+			// print out table header with max and min values along with increment
 			printHeader(10, -30, increments);
 
-
+			// loop through in order to print all values
+			// todo: change to variable values
 			for (int i = 2; i < 28; i = i + 2)
 			{
 				Console.WriteLine();
 				int[] temps = getEffectiveTemperatures(i);
 				Console.Write("{0, 4}{1, 4}", windSpeedLabel[i / (int)increments] + " |", i + ":");
-
 
 				// for each element in the corresponding effective temperature array,
 				// print the values and color the cells if they match the condition

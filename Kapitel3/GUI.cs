@@ -43,7 +43,7 @@ namespace Kapitel3
             paddle2.Top = panel.Height / 2 - paddle1.Height / 2;
             paddle2.Left = panel.Right - PADDLE_SCREEN_OFFSET - paddle2.Width;  
             
-            // set position of paddle2
+            // set position of ball
             ball.Top = panel.Height / 2 + ball.Height / 2; 
             ball.Left = panel.Width / 2 + ball.Width / 2;
 
@@ -100,6 +100,7 @@ namespace Kapitel3
             if (IntersectsWallVertically(ball, panel))
                 ShowGameOverScreen();
                 //ballSpeedX *= -1;
+
             UpdateScore();
         }
 
@@ -230,5 +231,6 @@ namespace Kapitel3
         {
 
         }
+
     }
 }

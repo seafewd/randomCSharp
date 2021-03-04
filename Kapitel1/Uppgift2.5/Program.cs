@@ -20,7 +20,7 @@ namespace Uppgift2._5
             Student student6 = new Student(new DateTime(2009, 11, 11), "SaladSnack", 18, gu);
 
             // list students
-            Console.WriteLine("Students i order of creation:");
+            Console.WriteLine("Students in order of creation:");
 
             // sort after date created
             gu.Students.Sort();
@@ -47,7 +47,7 @@ namespace Uppgift2._5
         public List<Student> Students
         {
             get { return students; }
-            set { }
+            set { students = value; }
 
         }
     }

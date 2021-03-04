@@ -7,7 +7,7 @@ namespace Uppgift1._8
         static void Main(string[] args)
         {
             Console.WriteLine(SomeFunc(-10));
-            Console.WriteLine(CalcIntegral(-10, 11, 100000));
+            Console.WriteLine(CalcIntegral(0, 3, 1000));
         }
 
         /*
@@ -25,7 +25,7 @@ namespace Uppgift1._8
             double sum = 0;
 
             for (int i = 0; i < n; i++)
-                sum += dx * SomeFunc(a + i * dx); // replace with any function
+                sum += dx * XSquared(a + i * dx); // replace with any function
 
             return sum;
 

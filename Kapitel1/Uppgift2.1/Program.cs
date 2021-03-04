@@ -16,6 +16,7 @@ namespace FractionDemo
             Console.WriteLine(f2.ToString());
 
             f.AddFractions(f2);
+            Console.WriteLine("multiplied: " + (f * f2).ToString());
             f.ToNormalForm();
             Console.WriteLine(f.ToString());
             f.ToMixedForm();
@@ -62,10 +63,10 @@ namespace FractionDemo
          */
         public void Reduce()
         {
-            int gcd = CalculateGCD(GetNumerator(), GetDenominator());
+            int gcd = CalculateGCD(Numerator, Denominator);
 
-            SetNumerator(GetNumerator() / gcd);
-            SetDenominator(GetDenominator() / gcd);
+            Numerator = (Numerator / gcd);
+            Denominator = (Denominator / gcd);
         }
 
         /*
@@ -97,8 +98,8 @@ namespace FractionDemo
 
         public void ToMixedForm()
         {
-            SetWholeNumber(GetNumerator() / GetDenominator());
-            SetNumerator(GetNumerator() % GetDenominator());
+            WholeNumber = (Numerator / Denominator);
+            Numerator = (Numerator % Denominator);
         }
 
         /*
@@ -110,8 +111,8 @@ namespace FractionDemo
          */
         public void ToNormalForm()
         {
-            SetNumerator(GetWholeNumber() * GetDenominator() + GetNumerator());
-            SetWholeNumber(0);
+            Numerator = (WholeNumber * Denominator + Numerator);
+            WholeNumber = 0;
         }
 
 
@@ -131,14 +132,20 @@ namespace FractionDemo
             ToNormalForm();
             other.ToNormalForm();
 
-            int newDenominator = this.GetDenominator() * other.GetDenominator();
+            int newDenominator = this.Denominator * other.Denominator;
 
-            this.SetNumerator(GetNumerator() * other.GetDenominator() + this.GetDenominator() * other.GetNumerator());
-            this.SetDenominator(newDenominator);
+            this.Numerator = (Numerator * other.Denominator + this.Denominator * other.Numerator);
+            this.Denominator = newDenominator;
 
             this.Reduce();
             this.ToMixedForm();
+        }
 
+        public static Fraction operator+(Fraction a, Fraction b)
+        {
+            Fraction fraction = new Fraction(a.WholeNumber, a.Numerator, a.Denominator);
+            fraction.AddFractions(b);
+            return fraction;
         }
 
         /*
@@ -153,35 +160,54 @@ namespace FractionDemo
             this.ToNormalForm();
             other.ToNormalForm();
 
-            this.SetNumerator(this.GetNumerator() * other.GetNumerator());
-            this.SetDenominator(this.GetDenominator() * other.GetDenominator());
+            this.Numerator = (this.Numerator * other.Numerator);
+            this.Denominator = (this.Denominator * other.Denominator);
 
             this.ToMixedForm();
             other.ToMixedForm();
         }
 
+        public static Fraction operator *(Fraction a, Fraction b)
+        {
+            Fraction fraction = new Fraction(a.WholeNumber, a.Numerator, a.Denominator);
+            fraction.MultiplyFraction(b);
+            return fraction;
+        }
+
         override
         public string ToString()
         {
-            if (GetWholeNumber() != 0)
-                return GetWholeNumber() + " " + GetNumerator() + " / " + GetDenominator();
+            if (WholeNumber != 0)
+                return WholeNumber + " " + Numerator + " / " + Denominator;
             else
-                return GetNumerator() + " / " + GetDenominator();
+                return Numerator + " / " + Denominator;
         }
 
         // Get / Set
 
-        public int GetWholeNumber() { return wholeNumber; }
+        public int WholeNumber
+        {
+            get { return wholeNumber; }
+            set { wholeNumber = value; }
+        }
 
-        public int GetNumerator() { return numerator; }
+        public int Numerator
+        {
+            get { return numerator; }
+            set { numerator = value; }
+        }
 
-        public int GetDenominator() { return denominator; }
-
-        public void SetWholeNumber(int number) { wholeNumber = number; }
-
-        public void SetNumerator(int number) { numerator = number; }
-
-        public void SetDenominator(int number) { denominator = number; }
+        public int Denominator
+        {
+            get { return denominator; }
+            set 
+            {
+                if (denominator == 0)
+                    denominator = 1;
+                else
+                    denominator = value;
+            }
+        }
 
     }
 }

@@ -35,8 +35,8 @@ namespace Kapitel3
             this.paddle1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel = new System.Windows.Forms.Panel();
-            this.ScoreLabel = new System.Windows.Forms.Label();
             this.GameOverLabel = new System.Windows.Forms.Label();
+            this.ScoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.paddle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paddle1)).BeginInit();
@@ -86,17 +86,6 @@ namespace Kapitel3
             this.panel.Size = new System.Drawing.Size(1324, 589);
             this.panel.TabIndex = 3;
             // 
-            // ScoreLabel
-            // 
-            this.ScoreLabel.AutoSize = true;
-            this.ScoreLabel.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScoreLabel.Location = new System.Drawing.Point(563, 27);
-            this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(182, 59);
-            this.ScoreLabel.TabIndex = 0;
-            this.ScoreLabel.Text = "Score: 0";
-            this.ScoreLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
             // GameOverLabel
             // 
             this.GameOverLabel.AutoSize = true;
@@ -109,6 +98,17 @@ namespace Kapitel3
             this.GameOverLabel.TabIndex = 1;
             this.GameOverLabel.Text = "Game Over!\r\n\r\nEsc  -  Quit\r\nF1    -  Restart";
             this.GameOverLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Font = new System.Drawing.Font("Calibri", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreLabel.Location = new System.Drawing.Point(563, 27);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(182, 59);
+            this.ScoreLabel.TabIndex = 0;
+            this.ScoreLabel.Text = "Score: 0";
+            this.ScoreLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // GUI
             // 

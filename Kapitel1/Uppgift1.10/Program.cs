@@ -13,9 +13,10 @@ namespace Uppgift1._10
             string numerals2 = "DDXV";
             string numerals3 = "MMXXI";
             string numerals4 = "VVVVI";
+            string numerals5 = "IV";
 
             // for easy testing
-            string argument = numerals3;
+            string argument = numerals5;
 
             Console.WriteLine("Roman numerals \"" + argument + "\" in arabic numerals:");
             Console.WriteLine(main.ParseRomanNumerals(argument));

@@ -13,6 +13,8 @@ namespace Uppgift2._2
             StaticVariable sv4 = new StaticVariable();
             StaticVariable sv5 = new StaticVariable();
             StaticVariable sv6 = new StaticVariable();
+
+            Console.WriteLine(StaticVariable.GetCounter());
         }
     }
 
